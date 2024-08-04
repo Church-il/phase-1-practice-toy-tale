@@ -19,6 +19,8 @@ body {
 
 #toy-collection {
   margin: 2rem;
+  display: flex;
+  flex-wrap: wrap; /* Ensures cards wrap to new lines */
 }
 
 .card {
@@ -26,16 +28,20 @@ body {
   border: grey solid 1px;
   padding: 1rem;
   width: 15rem;
-  height: 25rem;
-  display: inline-grid;
-  margin: 1rem 2rem;
-  box-shadow: 3px 4px #e04b52
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  box-shadow: 3px 4px #e04b52;
+  background-color: #fff; /* Added background color for better contrast */
+  border-radius: 8px; /* Rounded corners for a more modern look */
 }
 
 .toy-avatar {
-  justify-self: center;
+  width: 100%; /* Ensures image fits the width of the card */
   height: 12rem;
-  width: auto;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-radius: 8px; /* Matches card border radius for consistency */
+  margin-bottom: 1rem; /* Adds space between image and text */
 }
 
 button {
@@ -48,6 +54,7 @@ button {
   color: whitesmoke;
   font-size: 18px;
   justify-self: center;
+  margin-top: 1rem; /* Adds space above the button */
 }
 
 button:hover {
@@ -58,7 +65,7 @@ button:hover {
 
 .container {
   padding: 1rem;
-  width: stretch;
+  width: 100%; /* Stretch container to full width */
   height: auto;
   display: none;
   background: #515DA2;
@@ -66,7 +73,8 @@ button:hover {
 }
 
 .add-toy-form {
-  width: 80%
+  width: 80%;
+  margin: 0 auto; /* Center the form */
 }
 
 .submit {
@@ -88,11 +96,10 @@ button:hover {
   color: #e04b52;
 }
 
-
 .input-text {
   border-radius: 5px;
   height: 2rem;
-  width: 60%;
+  width: 100%; /* Full width for input fields */
   font-size: 18px;
   font-family: monospace;
   margin: 3px;
